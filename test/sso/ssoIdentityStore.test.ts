@@ -7,17 +7,17 @@ test('SsoIdentityStore creates expected resources', () => {
   const stack = new cdk.Stack(app, 'TestStack');
   new SsoIdentityStore(stack, 'TestIdentityStore', {});
   const template = Template.fromStack(stack);
-  console.debug('Synthesized Template:', JSON.stringify(template.toJSON(), null, 2));
   const createUpdateMatchValue = Match.objectEquals({
-    'Fn::Join': Match.arrayEquals(
-      ['', Match.arrayEquals([
+    'Fn::Join': Match.arrayEquals([
+      '',
+      Match.arrayEquals([
         '{\"service\":\"SSOAdmin\",\"action\":\"listInstances\",\"parameters\":{\"region\":\"',
         Match.objectEquals({
           Ref: 'AWS::Region',
         }),
         Match.anyValue(),
-      ])],
-    ),
+      ]),
+    ]),
   });
   template.hasResourceProperties('Custom::SSO-IdentityStore', {
     Create: createUpdateMatchValue,
