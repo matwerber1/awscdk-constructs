@@ -1,6 +1,5 @@
 import { awscdk } from 'projen';
-import { NpmAccess } from 'projen/lib/javascript';
-
+import { NpmAccess, ProseWrap, TrailingComma } from 'projen/lib/javascript';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Mat Werber',
   authorAddress: 'matwerber@gmail.com',
@@ -10,6 +9,19 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: 'awscdk-constructs',
   packageName: '@matwerber/awscdk-constructs',
   npmAccess: NpmAccess.PUBLIC,
+  prettier: true,
+  prettierOptions: {
+    ignoreFile: true,
+    ignoreFileOptions: {
+      ignorePatterns: ['.github/'],
+    },
+    yaml: true,
+    settings: {
+      printWidth: 100,
+      proseWrap: ProseWrap.ALWAYS,
+      singleQuote: true,
+    },
+  },
   projenrcTs: true,
   repositoryUrl: 'https://github.com/matwerber1/awscdk-constructs.git',
   license: 'MIT',
