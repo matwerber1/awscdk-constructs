@@ -2,25 +2,25 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### SsoIdentityStore <a name="SsoIdentityStore" id="awscdk-constructs.SsoIdentityStore"></a>
+### SsoIdentityStore <a name="SsoIdentityStore" id="@matwerber/awscdk-constructs.SsoIdentityStore"></a>
 
-#### Initializers <a name="Initializers" id="awscdk-constructs.SsoIdentityStore.Initializer"></a>
+#### Initializers <a name="Initializers" id="@matwerber/awscdk-constructs.SsoIdentityStore.Initializer"></a>
 
 ```typescript
-import { SsoIdentityStore } from 'awscdk-constructs'
+import { SsoIdentityStore } from '@matwerber/awscdk-constructs'
 
 new SsoIdentityStore(scope: Construct, id: string, props?: SsoIdentityStoreProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#awscdk-constructs.SsoIdentityStore.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | - The scope in which to define this construct. |
-| <code><a href="#awscdk-constructs.SsoIdentityStore.Initializer.parameter.id">id</a></code> | <code>string</code> | - The scoped construct ID. |
-| <code><a href="#awscdk-constructs.SsoIdentityStore.Initializer.parameter.props">props</a></code> | <code><a href="#awscdk-constructs.SsoIdentityStoreProps">SsoIdentityStoreProps</a></code> | *No description.* |
+| <code><a href="#@matwerber/awscdk-constructs.SsoIdentityStore.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | - The scope in which to define this construct. |
+| <code><a href="#@matwerber/awscdk-constructs.SsoIdentityStore.Initializer.parameter.id">id</a></code> | <code>string</code> | - The scoped construct ID. |
+| <code><a href="#@matwerber/awscdk-constructs.SsoIdentityStore.Initializer.parameter.props">props</a></code> | <code><a href="#@matwerber/awscdk-constructs.SsoIdentityStoreProps">SsoIdentityStoreProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="awscdk-constructs.SsoIdentityStore.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@matwerber/awscdk-constructs.SsoIdentityStore.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
@@ -28,7 +28,7 @@ The scope in which to define this construct.
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="awscdk-constructs.SsoIdentityStore.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@matwerber/awscdk-constructs.SsoIdentityStore.Initializer.parameter.id"></a>
 
 - *Type:* string
 
@@ -36,9 +36,9 @@ The scoped construct ID.
 
 ---
 
-##### `props`<sup>Optional</sup> <a name="props" id="awscdk-constructs.SsoIdentityStore.Initializer.parameter.props"></a>
+##### `props`<sup>Optional</sup> <a name="props" id="@matwerber/awscdk-constructs.SsoIdentityStore.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#awscdk-constructs.SsoIdentityStoreProps">SsoIdentityStoreProps</a>
+- *Type:* <a href="#@matwerber/awscdk-constructs.SsoIdentityStoreProps">SsoIdentityStoreProps</a>
 
 ---
 
@@ -46,11 +46,11 @@ The scoped construct ID.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#awscdk-constructs.SsoIdentityStore.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@matwerber/awscdk-constructs.SsoIdentityStore.toString">toString</a></code> | Returns a string representation of this construct. |
 
 ---
 
-##### `toString` <a name="toString" id="awscdk-constructs.SsoIdentityStore.toString"></a>
+##### `toString` <a name="toString" id="@matwerber/awscdk-constructs.SsoIdentityStore.toString"></a>
 
 ```typescript
 public toString(): string
@@ -62,21 +62,21 @@ Returns a string representation of this construct.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#awscdk-constructs.SsoIdentityStore.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@matwerber/awscdk-constructs.SsoIdentityStore.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="awscdk-constructs.SsoIdentityStore.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@matwerber/awscdk-constructs.SsoIdentityStore.isConstruct"></a>
 
 ```typescript
-import { SsoIdentityStore } from 'awscdk-constructs'
+import { SsoIdentityStore } from '@matwerber/awscdk-constructs'
 
 SsoIdentityStore.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="awscdk-constructs.SsoIdentityStore.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@matwerber/awscdk-constructs.SsoIdentityStore.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -88,14 +88,14 @@ Any object.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#awscdk-constructs.SsoIdentityStore.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#awscdk-constructs.SsoIdentityStore.property.identityStoreId">identityStoreId</a></code> | <code>string</code> | The unique identifier for the identity store that is connected to your IAM Identity Center instance. |
-| <code><a href="#awscdk-constructs.SsoIdentityStore.property.instanceArn">instanceArn</a></code> | <code>string</code> | The ARN of the IAM Identity Center instance. |
-| <code><a href="#awscdk-constructs.SsoIdentityStore.property.ownerAccountId">ownerAccountId</a></code> | <code>string</code> | The AWS account ID that owns the IAM Identity Center instance. |
+| <code><a href="#@matwerber/awscdk-constructs.SsoIdentityStore.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@matwerber/awscdk-constructs.SsoIdentityStore.property.identityStoreId">identityStoreId</a></code> | <code>string</code> | The unique identifier for the identity store that is connected to your IAM Identity Center instance. |
+| <code><a href="#@matwerber/awscdk-constructs.SsoIdentityStore.property.instanceArn">instanceArn</a></code> | <code>string</code> | The ARN of the IAM Identity Center instance. |
+| <code><a href="#@matwerber/awscdk-constructs.SsoIdentityStore.property.ownerAccountId">ownerAccountId</a></code> | <code>string</code> | The AWS account ID that owns the IAM Identity Center instance. |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="awscdk-constructs.SsoIdentityStore.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@matwerber/awscdk-constructs.SsoIdentityStore.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -107,7 +107,7 @@ The tree node.
 
 ---
 
-##### `identityStoreId`<sup>Required</sup> <a name="identityStoreId" id="awscdk-constructs.SsoIdentityStore.property.identityStoreId"></a>
+##### `identityStoreId`<sup>Required</sup> <a name="identityStoreId" id="@matwerber/awscdk-constructs.SsoIdentityStore.property.identityStoreId"></a>
 
 ```typescript
 public readonly identityStoreId: string;
@@ -119,7 +119,7 @@ The unique identifier for the identity store that is connected to your IAM Ident
 
 ---
 
-##### `instanceArn`<sup>Required</sup> <a name="instanceArn" id="awscdk-constructs.SsoIdentityStore.property.instanceArn"></a>
+##### `instanceArn`<sup>Required</sup> <a name="instanceArn" id="@matwerber/awscdk-constructs.SsoIdentityStore.property.instanceArn"></a>
 
 ```typescript
 public readonly instanceArn: string;
@@ -133,7 +133,7 @@ This is a globally unique identifier for your IAM Identity Center instance.
 
 ---
 
-##### `ownerAccountId`<sup>Required</sup> <a name="ownerAccountId" id="awscdk-constructs.SsoIdentityStore.property.ownerAccountId"></a>
+##### `ownerAccountId`<sup>Required</sup> <a name="ownerAccountId" id="@matwerber/awscdk-constructs.SsoIdentityStore.property.ownerAccountId"></a>
 
 ```typescript
 public readonly ownerAccountId: string;
@@ -151,7 +151,7 @@ management account ID.
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### SsoIdentityStoreProps <a name="SsoIdentityStoreProps" id="awscdk-constructs.SsoIdentityStoreProps"></a>
+### SsoIdentityStoreProps <a name="SsoIdentityStoreProps" id="@matwerber/awscdk-constructs.SsoIdentityStoreProps"></a>
 
 An AWS IAM Identity Center identity store used for AWS Single Sign-on (SSO).
 
@@ -165,10 +165,10 @@ console.log(identityStore.identityStoreId);
 ```
 
 
-#### Initializer <a name="Initializer" id="awscdk-constructs.SsoIdentityStoreProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="@matwerber/awscdk-constructs.SsoIdentityStoreProps.Initializer"></a>
 
 ```typescript
-import { SsoIdentityStoreProps } from 'awscdk-constructs'
+import { SsoIdentityStoreProps } from '@matwerber/awscdk-constructs'
 
 const ssoIdentityStoreProps: SsoIdentityStoreProps = { ... }
 ```
@@ -177,12 +177,12 @@ const ssoIdentityStoreProps: SsoIdentityStoreProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#awscdk-constructs.SsoIdentityStoreProps.property.logGroup">logGroup</a></code> | <code>aws-cdk-lib.aws_logs.LogGroup</code> | Optional CloudWatch Log Group to store the invocation logs of the Lambda function backing the custom resource used to retrieve the identity store ID. |
-| <code><a href="#awscdk-constructs.SsoIdentityStoreProps.property.ssoHomeRegion">ssoHomeRegion</a></code> | <code>string</code> | The AWS region in which AWS Identity Center (aka AWS SSO) is currently configured for your Organization and which will be used in the AWS API call used to retrieve information about your identity store ID. |
+| <code><a href="#@matwerber/awscdk-constructs.SsoIdentityStoreProps.property.logGroup">logGroup</a></code> | <code>aws-cdk-lib.aws_logs.LogGroup</code> | Optional CloudWatch Log Group to store the invocation logs of the Lambda function backing the custom resource used to retrieve the identity store ID. |
+| <code><a href="#@matwerber/awscdk-constructs.SsoIdentityStoreProps.property.ssoHomeRegion">ssoHomeRegion</a></code> | <code>string</code> | The AWS region in which AWS Identity Center (aka AWS SSO) is currently configured for your Organization and which will be used in the AWS API call used to retrieve information about your identity store ID. |
 
 ---
 
-##### `logGroup`<sup>Optional</sup> <a name="logGroup" id="awscdk-constructs.SsoIdentityStoreProps.property.logGroup"></a>
+##### `logGroup`<sup>Optional</sup> <a name="logGroup" id="@matwerber/awscdk-constructs.SsoIdentityStoreProps.property.logGroup"></a>
 
 ```typescript
 public readonly logGroup: LogGroup;
@@ -197,7 +197,7 @@ configured with a 7-day retention period.
 
 ---
 
-##### `ssoHomeRegion`<sup>Optional</sup> <a name="ssoHomeRegion" id="awscdk-constructs.SsoIdentityStoreProps.property.ssoHomeRegion"></a>
+##### `ssoHomeRegion`<sup>Optional</sup> <a name="ssoHomeRegion" id="@matwerber/awscdk-constructs.SsoIdentityStoreProps.property.ssoHomeRegion"></a>
 
 ```typescript
 public readonly ssoHomeRegion: string;

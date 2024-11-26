@@ -10,6 +10,20 @@ For now, project goals are:
 
 3. Improve my existing constructs over time rather than re-creating or copy-pasting them when needed across projects.
 
+## Installation
+
+### NodeJS
+
+```sh
+npm install @matwerber/awscdk-constructs
+```
+
+### Python
+
+```sh
+pip install matwerber-awscdk-constructs
+```
+
 
 ## FAQ
 

@@ -1,5 +1,5 @@
 {
-  "name": "awscdk-constructs",
+  "name": "@matwerber/awscdk-constructs",
   "repository": {
     "type": "git",
     "url": "https://github.com/matwerber1/awscdk-constructs.git"
@@ -67,9 +67,6 @@
   ],
   "main": "lib/index.js",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "version": "0.0.0",
   "jest": {
     "coverageProvider": "v8",

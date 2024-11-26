@@ -6,6 +6,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   jsiiVersion: '~5.5.0',
   name: 'awscdk-constructs',
+  packageName: '@matwerber/awscdk-constructs',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/matwerber1/awscdk-constructs.git',
   license: 'MIT',
