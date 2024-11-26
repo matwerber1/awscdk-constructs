@@ -1,4 +1,6 @@
 import { awscdk } from 'projen';
+import { NpmAccess } from 'projen/lib/javascript';
+
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Mat Werber',
   authorAddress: 'matwerber@gmail.com',
@@ -7,6 +9,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   jsiiVersion: '~5.5.0',
   name: 'awscdk-constructs',
   packageName: '@matwerber/awscdk-constructs',
+  npmAccess: NpmAccess.PUBLIC,
   projenrcTs: true,
   repositoryUrl: 'https://github.com/matwerber1/awscdk-constructs.git',
   license: 'MIT',
