@@ -1,7 +1,9 @@
 import {
   custom_resources as cr,
   aws_logs as logs,
-  RemovalPolicy, Duration, Stack,
+  RemovalPolicy,
+  Duration,
+  Stack,
 } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 
@@ -68,46 +70,35 @@ export class SsoIdentityStore extends Construct {
     super(scope, id);
 
     // Region in which AWS SSO was configured for current AWS Organization
-    const ssoHomeRegion: string =
-      props?.ssoHomeRegion ?? Stack.of(this).region;
+    const ssoHomeRegion: string = props?.ssoHomeRegion ?? Stack.of(this).region;
 
     // Use AWS SDK to make an sso-admin API call to retrieve info about the existing SSO identity store
-    const identityStoreResource = new cr.AwsCustomResource(
-      this,
-      'IdentityStoreResource',
-      {
-        resourceType: 'Custom::SSO-IdentityStore',
-        onUpdate: {
-          service: 'SSOAdmin',
-          action: 'listInstances',
-          parameters: ssoHomeRegion ? { region: ssoHomeRegion } : undefined,
-          physicalResourceId: cr.PhysicalResourceId.of(Date.now().toString()),
-        },
-        memorySize: 256,
-        logGroup:
-          props?.logGroup ??
-          new logs.LogGroup(this, 'LogGroup', {
-            retention: logs.RetentionDays.ONE_WEEK,
-            removalPolicy: RemovalPolicy.DESTROY,
-          }),
-        timeout: Duration.seconds(10),
-        policy: cr.AwsCustomResourcePolicy.fromSdkCalls({
-          resources: cr.AwsCustomResourcePolicy.ANY_RESOURCE,
-        }),
+    const identityStoreResource = new cr.AwsCustomResource(this, 'IdentityStoreResource', {
+      resourceType: 'Custom::SSO-IdentityStore',
+      onUpdate: {
+        service: 'SSOAdmin',
+        action: 'listInstances',
+        parameters: ssoHomeRegion ? { region: ssoHomeRegion } : undefined,
+        physicalResourceId: cr.PhysicalResourceId.of(Date.now().toString()),
       },
-    );
+      memorySize: 256,
+      logGroup:
+        props?.logGroup ??
+        new logs.LogGroup(this, 'LogGroup', {
+          retention: logs.RetentionDays.ONE_WEEK,
+          removalPolicy: RemovalPolicy.DESTROY,
+        }),
+      timeout: Duration.seconds(10),
+      policy: cr.AwsCustomResourcePolicy.fromSdkCalls({
+        resources: cr.AwsCustomResourcePolicy.ANY_RESOURCE,
+      }),
+    });
 
     // Currently, an AWS Organization can only have one identity store so we use the first (and presumably, only)
     // item sso-admin list-instances API call. If in the future AWS adds support for multiple identity stores,
     // we will need to rethink this approach.
-    this.identityStoreId = identityStoreResource.getResponseField(
-      'Instances.0.IdentityStoreId',
-    );
-    this.instanceArn = identityStoreResource.getResponseField(
-      'Instances.0.InstanceArn',
-    );
-    this.ownerAccountId = identityStoreResource.getResponseField(
-      'Instances.0.OwnerAccountId',
-    );
+    this.identityStoreId = identityStoreResource.getResponseField('Instances.0.IdentityStoreId');
+    this.instanceArn = identityStoreResource.getResponseField('Instances.0.InstanceArn');
+    this.ownerAccountId = identityStoreResource.getResponseField('Instances.0.OwnerAccountId');
   }
 }
